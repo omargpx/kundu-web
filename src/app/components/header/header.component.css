@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Roboto:wght@700&display=swap");
+.head {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(
+        135deg,
+        rgba(237, 237, 237, 0.18) 25%,
+        transparent 25%
+      ) -10px 0,
+    linear-gradient(225deg, rgba(237, 237, 237, 0.18) 25%, transparent 25%) -10px
+      0,
+    linear-gradient(315deg, rgba(237, 237, 237, 0.18) 25%, transparent 25%),
+    linear-gradient(45deg, rgba(237, 237, 237, 0.18) 25%, transparent 25%);
+  background-size: 20px 20px;
+  background-color: #feae24;
+  color: white;
+  padding: 2rem 0;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  user-select: none;
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: "Dosis", sans-serif;
+}

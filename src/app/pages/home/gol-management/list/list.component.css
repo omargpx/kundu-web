@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Roboto:wght@700&display=swap");
+.cabecera {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+.cabecera h2 {
+  font-size: 1.7rem;
+  font-family: "Roboto", sans-serif;
+  margin: 0.3rem 0;
+  padding: 0;
+}
+.button-add {
+  background-color: #feae24;
+  border-radius: 8px;
+  border-style: none;
+  box-shadow: #ae9a2726 0 4px 9px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  outline: none;
+  padding: 13px 2rem;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-add:hover {
+  background-color: #ffa200;
+  opacity: 1;
+  transform: translateY(0);
+  transition-duration: 0.35s;
+  box-shadow: rgba(39, 174, 96, 0.2) 0 6px 12px;
+}
+
+.button-add:active {
+  transform: translateY(2px);
+  transition-duration: 0.35s;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: max-content;
+  width: max-content;
+  padding: 0.9rem 0.5rem;
+  border-radius: 5rem;
+  background: #eee;
+  -webkit-border-radius: 5rem;
+  -moz-border-radius: 5rem;
+  -ms-border-radius: 5rem;
+  -o-border-radius: 5rem;
+  cursor: pointer;
+}
+
+.dot {
+  min-width: 4px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #bbb;
+  margin: 1px;
+}
+
+.dots:hover {
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transition: transform 0.3s ease-in;
+  -webkit-transition: transform 0.3s ease-in;
+  -moz-transition: transform 0.3s ease-in;
+  -ms-transition: transform 0.3s ease-in;
+  -o-transition: transform 0.3s ease-in;
+}
+.dots:active {
+  transform: translateY(2px);
+  transition-duration: 0.35s;
+}
+.search-box{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+}
+.search-box div{
+  margin-right: 2rem;
+  user-select: none;
+}
+.table-management {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -1px 0px 11px 0px rgba(54, 54, 54, 0.2s);
+  -webkit-box-shadow: -1px 0px 11px 0px rgba(54, 54, 54, 0.2);
+  -moz-box-shadow: -1px 0px 11px 0px rgba(54, 54, 54, 0.2);
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+.tab-head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+.tab-head p {
+  padding: 0;
+  margin: 0;
+  vertical-align: middle;
+  font-family: monospace;
+  margin: 0.2rem 0.3rem;
+  font-weight: 600;
+  color: #132b3f;
+  font-size: 1rem;
+}
+.tab-body{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  text-align: left;
+  width: 100%;
+}
+.tab-body .t-row{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 23% 23% 23% 23% 5%;
+  column-gap: 1rem;
+  height: max-content;
+  border-bottom: 1px solid #eee;
+  align-items: center;
+  padding: .5rem 0;
+  border-radius: .5rem;
+  -webkit-border-radius: .5rem;
+  -moz-border-radius: .5rem;
+  -ms-border-radius: .5rem;
+  -o-border-radius: .5rem;
+}
+.t-row:hover{
+  background-color: #faf7eb;
+  transition: all .3s ease-in;
+  -webkit-transition: all .3s ease-in;
+  -moz-transition: all .3s ease-in;
+  -ms-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+}
+.t-row p{
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+.tab-body .t-row .r-name{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  user-select: none;
+}
+.r-name h2{
+  margin: 0 .5rem;
+  padding: 0;
+  font-family: 'Dosis', sans-serif;
+}
+.tab-body .t-row .r-name img{
+  border-radius: 50%;
+  width: 40px;
+  object-fit: cover;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}

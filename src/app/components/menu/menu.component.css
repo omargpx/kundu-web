@@ -1,0 +1,58 @@
+.riel {
+  position: fixed;
+  top: 10%;
+  z-index: 2;
+  width: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 500;
+  box-shadow: 0px 2px 7px 0px #ddd;
+}
+.riel ul {
+  margin: 0;
+  padding-left: 5%;
+  height: 100%;
+  list-style: none;
+  display: flex;
+}
+ul li {
+  margin: 0.5rem;
+  margin-right: 2rem;
+}
+li a {
+  cursor: pointer;
+  opacity: 0.8;
+  text-decoration: none;
+  color: #0d2238;
+  transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+}
+li a:hover {
+  opacity: 1;
+  color: #fe8624;
+}
+.get-out {
+  height: 100%;
+  padding-right: 5rem;
+}
+.get-out a {
+  text-decoration: none;
+  color: rgb(27, 29, 34);
+  opacity: 0.7;
+  transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+}
+.get-out a:hover {
+  opacity: 1;
+  color: #014278;
+}

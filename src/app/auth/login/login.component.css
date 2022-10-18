@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+h1 {
+	font-weight: bold;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+h2 {
+	text-align: center;
+}
+
+p {
+	font-size: 14px;
+	font-weight: 100;
+	line-height: 20px;
+	letter-spacing: 0.5px;
+}
+label{
+    font-family: 'Montserrat',sans-serif;
+}
+
+span {
+	font-size: 12px;
+}
+
+a {
+    cursor: pointer;
+	color: #333;
+	font-size: 14px;
+	text-decoration: none;
+	margin: 15px 0;
+}
+a:hover{
+    color: #ffaa2b;
+}
+
+button {
+	border-radius: 20px;
+	border: 1px solid #FAAE2B;
+	background-color: #FAAE2B;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+
+button:active {
+	transform: scale(0.95);
+}
+
+button:focus {
+	outline: none;
+}
+
+.bod-log{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+.bod-log .form-log{
+    width: 45%;
+}
+.bod-log .form-log form{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 10rem;
+    background-color: white;
+}
+.bod-log .desc-web{
+    width: 55%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FAAE2B;
+}
+.desc-web img{
+    width: 120%;
+    margin-right: -45%;    
+}
+.desc-web h1{
+    font-size: 3.5vw;
+    position: absolute;
+    width: 29%;
+    text-align: left;
+    color: white;   
+    margin-left: -20%;
+    line-height: 3.5vw;
+    text-shadow: 2px 2px #969696;
+}
+
+@media only screen and (max-width:1400px){
+    .form-log form{
+        padding: 1rem;
+    }
+}
+
+@media only screen and (max-width:950px) {
+    .desc-web{
+        display: none;
+    }
+}
+
+
+/*LOADER*/
+.loader{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.dots {
+  width: 56px;
+  height: 26.9px;
+  background: radial-gradient(circle closest-side, #faae2b 90%, #0000) 0% 50%,
+    radial-gradient(circle closest-side, #faae2b 90%, #0000) 50% 50%,
+    radial-gradient(circle closest-side, #faae2b 90%, #0000) 100% 50%;
+  background-size: calc(100% / 3) 13.4px;
+  background-repeat: no-repeat;
+  animation: dots-7ar3yq 1.2s infinite linear;
+}
+
+@keyframes dots-7ar3yq {
+  20% {
+    background-position: 0% 0%, 50% 50%, 100% 50%;
+  }
+
+  40% {
+    background-position: 0% 100%, 50% 0%, 100% 50%;
+  }
+
+  60% {
+    background-position: 0% 50%, 50% 100%, 100% 0%;
+  }
+
+  80% {
+    background-position: 0% 50%, 50% 50%, 100% 100%;
+  }
+}

@@ -1,0 +1,99 @@
+<div class="cabecera">
+    <div class="col-8 m-2">
+        <div class="welcome-user">
+            <div data-aos="fade-right" class="title">
+                <h2>Welcome {{user.name}} {{user.apP}} </h2>
+                <p>¡Have a nice day to works!</p>
+            </div>
+            <img src="assets/img/explore.svg" alt="svg-ilustration">
+        </div>
+        <div class="events" data-aos="fade-up">
+            <div class="card">
+                <div class="title">
+                    <h2>Events</h2>
+                    <p>3 total Events</p>
+                </div>
+                <img src="assets/img/events.svg" alt="svg-card">
+            </div>
+            <div class="card">
+                <div class="title">
+                    <h2>Objetives</h2>
+                    <p>3 total now</p>
+                </div>
+                <img src="assets/img/objetives.svg" alt="svg-card">
+            </div>
+            <div class="card">
+                <div class="title">
+                    <h2>Users</h2>
+                    <p>There are {{users}} </p>
+                </div>
+                <img src="assets/img/users.svg" alt="svg-card">
+            </div>
+        </div>
+    </div>
+    <div class="col-4 m-2">
+        <div class="welcome">
+            <h1 data-aos="fade-down">¡Welcome to kundu administration!</h1>
+            <img src="assets/img/comod-members.png" alt="welcome">
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <div class="col-4 m-2">
+        <div class="card-col">
+            <div class="title">
+                <h2>Administrators</h2>
+            </div>
+            <div class="list-admins">
+                <div class="admins" *ngFor="let admins of administrators;index as i">
+                    <div class="user-admin">
+                        <h2> {{admins.id}} {{admins.firstname}} {{admins.lastname}}</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-8">
+        <div class="col-12 m-2 dat-8">
+            <div class="col-6 dat-6" data-aos="fade-right">
+                <div class="datas mb-2">
+                    <h2>Users</h2>
+                    <span>{{users}}</span>
+                </div>
+                <div class="datas mb-2">
+                    <h2>Themes</h2>
+                    <span>15</span>
+                </div>
+                <div class="datas">
+                    <h2>Champions</h2>
+                    <span>25</span>
+                </div>
+            </div>
+            <div class="col-6 dat-6" data-aos="fade-left">
+                <div class="datas mb-2">
+                    <h2>Goles</h2>
+                    <span>28</span>
+                </div>
+                <div class="datas mb-2">
+                    <h2>Administrators</h2>
+                    <span>12</span>
+                </div>
+                <div class="datas">
+                    <h2>Gol Awards</h2>
+                    <span>9</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 m-2 p-2">
+            <div class="next-event">
+                <div data-aos="fade-right" class="title">
+                    <p>Next Event is in 3 days</p>
+                    <h2>Enfasis Espiritual - El Rescate </h2>
+                    <p>¡Don't forget to attend!</p>
+                </div>
+                <img src="assets/img/hi-f.png" alt="asistant-illustration" data-aos="fade-up">
+            </div>
+        </div>
+    </div>
+</div>

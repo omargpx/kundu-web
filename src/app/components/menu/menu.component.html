@@ -1,0 +1,28 @@
+<div class="riel">
+    <ul data-aos="fade-right">
+        <li>
+            <a [routerLink]="['/home']" class="nav-link" aria-current="page"><i class="fas fa-table"></i> Dashboard</a>
+        </li>
+        <li>
+            <a [routerLink]="['/home/goles']" class="nav-link" aria-current="page" href="#"><i class="fas fa-futbol"></i> Goles</a>
+        </li>
+        <li>
+            <a [routerLink]="['/home/users']" class="nav-link" aria-current="page" href=""><i class="fas fa-users"></i> Users</a>
+        </li>
+        <li>
+            <a [routerLink]="['/home/events']" class="nav-link" aria-current="page" href=""><i class="fas fa-calendar-check"></i> Events</a>
+        </li>
+        <li>
+            <a [routerLink]="['/home/themes']" class="nav-link" aria-current="page" href=""><i class="fas fa-swatchbook"></i> Themes</a>
+        </li>
+        <li>
+            <a [routerLink]="['/home/challenges']" class="nav-link" aria-current="page" href=""><i class="fas fa-chart-pie"></i> Chalenges</a>
+        </li>
+        <li>
+            <a [routerLink]="['/home/admins']" class="nav-link" aria-current="page" href="#"><i class="fas fa-user-tie"></i> Admins</a>
+        </li>
+    </ul>
+    <div class="get-out" data-aos="fade-left">
+        <a (click)="logOut()" href="">{{name}} <i class="fas fa-sign-out-alt"></i></a>
+    </div>
+</div>

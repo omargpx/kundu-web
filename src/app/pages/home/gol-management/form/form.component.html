@@ -1,0 +1,22 @@
+<div class="co-12">
+    <div class="col-12 head m-2 p2">
+        <a [routerLink]="['/home/goles']" data-aos="fade-left"><i class="fa-solid fa-chevron-left"></i></a>
+    </div>
+    <div class="col-12">
+        <form class="form col-12 p-4">
+            <div class="profile p-2">
+                <div class="mb-3 name">
+                    <label for="gol-name" class="form-label">GOL Name</label>
+                    <input type="text" class="form-control" id="gol-name" aria-describedby="gol-help">
+                    <div id="gol-help" class="form-text">Enter the name of the GOL and choose an image</div>
+                </div>
+                <div class="img-profile" (click)="onSelectProfile()">
+                    <img src="https://i.ibb.co/nQ3G9SV/image-blank.png" alt="profile">
+                    <div id="up-add">
+                        <span>Choose image</span>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

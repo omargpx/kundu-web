@@ -1,0 +1,25 @@
+<div class="bod-log">
+    <div class="form-log">
+        <form data-aos="fade-up">
+            <h1>Sign in</h1>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="example@upeu.edu.pe" />
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="* * * * *"/>
+            </div>
+            <a href="#">Forgot your password?</a>
+            <button type="button" (click)="login()">Sign In</button>
+        </form>
+    </div>
+    <div class="desc-web">
+        <img src="assets/img/members.png" alt="members" data-aos="fade-left" data-aos-delay="200">
+        <h1 data-aos="fade-right" data-aos-delay="200">Bienvenido a la administracion de KunduApp</h1>
+    </div>
+</div>
+
+<div class="loader" *ngIf="isLoading" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+    <div class="dots"></div>
+</div>
