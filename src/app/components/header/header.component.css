@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Roboto:wght@700&display=swap");
 .head {
-  position: fixed;
-  top: 0;
-  z-index: 2;
-  left: 0;
   width: 100%;
   background: linear-gradient(
         135deg,
