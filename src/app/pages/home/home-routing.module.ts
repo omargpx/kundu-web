@@ -21,6 +21,13 @@ const routes: Routes = [
             (m) => m.GolRoutingModule
           ),
       },
+      {
+        path: 'users',
+        loadChildren: () =>
+          import('./user-management/users-routing.module').then(
+            (u) => u.UsersRoutingModule
+          ),
+      },
       { path: 'not-found', component: NotFoundComponent },
       { path: '**', redirectTo: 'not-found' },
     ],

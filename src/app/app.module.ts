@@ -14,6 +14,7 @@ import { DashboardComponent } from './pages/home/dashboard/dashboard.component';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { GolManagementComponent } from './pages/home/gol-management/gol-management.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { UserManagementComponent } from './pages/home/user-management/user-management.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import {MatDialogModule} from '@angular/material/dialog';
     HomeComponent,
     DashboardComponent,
     GolManagementComponent,
+    UserManagementComponent,
   ],
   imports: [
     BrowserModule,

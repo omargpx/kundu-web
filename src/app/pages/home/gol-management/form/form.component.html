@@ -1,6 +1,7 @@
-<div class="co-12">
+<div class="co-12" data-aos="fade-left">
     <div class="col-12 head m-2 p2">
-        <a [routerLink]="['/home/goles']" data-aos="fade-left"><i class="fa-solid fa-chevron-left"></i></a>
+        <a [routerLink]="['/home/goles']"><i class="fa-solid fa-chevron-left"></i></a>
+        <h2>CREATE GOL</h2>
     </div>
     <div class="col-12">
         <form class="form col-12 p-4">
@@ -16,6 +17,22 @@
                         <span>Choose image</span>
                     </div>
                 </div>
+            </div>
+            <div class="details p-2 mt-3">
+                <div class="form-floating mb-3">
+                    <textarea class="form-control" placeholder="write your lema" id="gol-lema"
+                        style="height: 100px"></textarea>
+                    <label for="gol-lema">Lema</label>
+                </div>
+                <div class="mb-3 name">
+                    <label for="verse" class="form-label">Pasaje Biblico</label>
+                    <input type="text" class="form-control" id="verse">
+                </div>
+                <div class="mb-3 name">
+                    <label for="verse" class="form-label">Canción</label>
+                    <input type="text" class="form-control" id="verse" placeholder="Only name of the song">
+                </div>
+                <button class="btn-save" type="button">Guardar</button>
             </div>
         </form>
     </div>

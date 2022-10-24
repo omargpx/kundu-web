@@ -13,8 +13,8 @@ export class ListComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  addGol() {
-    this.router.navigate(['/home/goles/add']);
+  addUser() {
+    this.router.navigate(['/home/users/add']);
   }
 
   openMenu() {

@@ -1,1 +1,18 @@
-<p>gol-profiles works!</p>
+<div class="title">
+    <h1>Gallery logos</h1>
+    <p>Chose one</p>
+</div>
+<div class="radio-tile-group">
+    <div class="listing" *ngFor="let logo of logos;index as i">
+        <div class="input-container">
+            <input id="{{logo.name}}" type="radio" name="radio">
+            <div class="radio-tile">
+                <img src="{{logo.url_img}}" alt="logo_gol_{{logo.name}}" />
+                <label for="{{logo.name}}">{{logo.name}}</label>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="save">
+    <button type="button">Select</button>
+</div>

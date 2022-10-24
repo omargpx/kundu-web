@@ -5,20 +5,17 @@ import { GolProfilesComponent } from 'src/app/components/gol-profiles/gol-profil
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
-  styleUrls: ['./form.component.css']
+  styleUrls: ['./form.component.css'],
 })
 export class FormComponent implements OnInit {
+  constructor(private dialog: MatDialog) {}
 
-  constructor(private dialog:MatDialog) { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
-  }
-
-  onSelectProfile(){
-    this.dialog.open(GolProfilesComponent,{
-      width:'250px',
-      data:'right click '
+  onSelectProfile() {
+    this.dialog.open(GolProfilesComponent, {
+      maxHeight: '85vh',
+      maxWidth: '95vw',
     });
   }
-
 }
