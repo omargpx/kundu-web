@@ -1,5 +1,7 @@
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, ErrorHandler, NgModule } from '@angular/core';
+import { Router } from "@angular/router";
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +18,7 @@ import { GolManagementComponent } from './pages/home/gol-management/gol-manageme
 import {MatDialogModule} from '@angular/material/dialog';
 import { UserManagementComponent } from './pages/home/user-management/user-management.component';
 
+import * as Sentry from "@sentry/angular";
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,9 +37,27 @@ import { UserManagementComponent } from './pages/home/user-management/user-manag
     ComponentsModule,
     NgApexchartsModule,
     MatDialogModule,
+    HttpClientModule,
     FlexLayoutModule.withConfig({ addOrientationBps: true }),
   ],
-  providers: [],
+  providers: [
+    {
+      provide: ErrorHandler,
+      useValue: Sentry.createErrorHandler({
+        showDialog: true,
+      }),
+    },
+    {
+      provide: Sentry.TraceService,
+      deps: [Router],
+    },
+    {
+      provide: APP_INITIALIZER,
+      useFactory: () => () => {},
+      deps: [Sentry.TraceService],
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

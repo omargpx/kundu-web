@@ -3,7 +3,20 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  development: true,
+  info(env:string) {
+    console.clear();
+    const dev_info_css =
+      'font-size:25px; font-family: "Oswaldo", sans-serif; color: #feae24;';
+    console.info(
+      `%cKundu%c.web %c</> %c${env} console`,
+      dev_info_css,
+      dev_info_css + 'color: #1e3b5a;',
+      'color: #feae24;',
+      'color: gray; font-family: arial, tahoma, verdana;'
+    );
+  },
 };
 
 /*

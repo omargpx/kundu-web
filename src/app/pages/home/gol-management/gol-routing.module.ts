@@ -6,6 +6,7 @@ import { GolManagementComponent } from './gol-management.component';
 import { ListComponent } from './list/list.component';
 import { FormComponent } from './form/form.component';
 import { ModalComponent } from './modal/modal.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 const routes: Routes = [
   {
@@ -20,7 +21,7 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [FormComponent, ListComponent, ModalComponent],
-  imports: [RouterModule.forChild(routes), ComponentsModule, CommonModule],
+  imports: [RouterModule.forChild(routes), ComponentsModule, CommonModule,MatDialogModule],
   exports: [RouterModule],
 })
 export class GolRoutingModule {}

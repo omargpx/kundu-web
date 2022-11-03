@@ -1,15 +1,20 @@
-<div class="title">
+<div class="title" mat-dialog-title>
     <h1>Gallery logos</h1>
     <p>Chose one</p>
 </div>
 <div class="radio-tile-group">
     <div class="listing" *ngFor="let logo of logos;index as i">
         <div class="input-container">
-            <input id="{{logo.name}}" type="radio" name="radio">
+            <input matInput [(ngModel)]="data.response" id="{{logo.name}}" type="radio" name="golprofiles"
+                value="{{logo.url_img}}">
             <div class="radio-tile">
                 <img src="{{logo.url_img}}" alt="logo_gol_{{logo.name}}" />
                 <label for="{{logo.name}}">{{logo.name}}</label>
             </div>
         </div>
     </div>
+</div>
+<div class="save" mat-dialog-actions>
+    <button mat-button (click)="onNoClick()" id="close">No Thanks</button>
+    <button mat-button [mat-dialog-close]="data.response" type="button" cdkFocusInitial>Select</button>
 </div>

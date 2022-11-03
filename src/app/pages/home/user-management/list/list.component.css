@@ -46,18 +46,23 @@
   transition-duration: 0.35s;
 }
 
-.search-box{
+.search-box {
   display: flex;
   flex-direction: row;
   justify-content: left;
   align-items: center;
 }
-.search-box div{
+.search-box div {
   margin-right: 2rem;
   user-select: none;
 }
+
+/*DISEÑO DE LA BARRA DE TEXTO*/
+
 .table-management {
   width: 100%;
+  max-height: 65vh;
+  overflow-y: scroll;
   display: flex;
   flex-direction: column;
   box-shadow: -1px 0px 11px 0px rgba(54, 54, 54, 0.2s);
@@ -70,14 +75,51 @@
   -o-border-radius: 0.5rem;
   padding: 0.5rem;
 }
+
+.ga ::-webkit-scrollbar-thumb {
+  background-color: #facd80;
+  border-radius: 20px;
+  border: none;
+}
+
+.ga ::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+.ga ::-webkit-scrollbar-button:increment,
+.ga ::-webkit-scrollbar-button {
+  display: none;
+}
+
+.ga ::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.ga ::-webkit-scrollbar-track-piece {
+  background-color: #eee;
+}
+
+.ga ::-webkit-scrollbar:vertical {
+  width: 5px;
+}
+
+.ga ::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
 .tab-head {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  position: fixed;
+  margin-top: -0.5rem;
+  margin-left: -0.3rem;
+  width: 98%;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 22% 22% 25% 20% 8%;
   padding: 0.5rem;
   text-align: left;
   border-bottom: 1px solid #eee;
+  border-radius: 0.3rem;
 }
 .tab-head p {
   padding: 0;
@@ -89,7 +131,14 @@
   color: #132b3f;
   font-size: 1rem;
 }
-.tab-body{
+.loadData {
+  margin-top: 4%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tab-body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -98,48 +147,47 @@
   text-align: left;
   width: 100%;
 }
-.tab-body .t-row{
-  width: 99%;
+.tab-body .t-row {
+  width: 100%;
   display: grid;
-  grid-template-columns: 22% 22% 25% 20% 5%;
-  column-gap: 1rem;
+  grid-template-columns: 22% 22% 25% 20% 8%;
+  column-gap: 0rem;
   height: max-content;
   border-bottom: 1px solid #eee;
   align-items: center;
-  justify-content: center;
-  padding: .5rem 0;
-  border-radius: .5rem;
-  -webkit-border-radius: .5rem;
-  -moz-border-radius: .5rem;
-  -ms-border-radius: .5rem;
-  -o-border-radius: .5rem;
+  padding: 0.5rem 0;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
 }
-.t-row:hover{
+.t-row:hover {
   background-color: #faf7eb;
-  transition: all .3s ease-in;
-  -webkit-transition: all .3s ease-in;
-  -moz-transition: all .3s ease-in;
-  -ms-transition: all .3s ease-in;
-  -o-transition: all .3s ease-in;
+  transition: all 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
 }
-.t-row p{
+.t-row p {
   margin: 0;
   padding: 0;
   align-items: center;
 }
-.tab-body .t-row .r-name{
+.tab-body .t-row .r-name {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: left;
   user-select: none;
 }
-.r-name h2{
-  margin: 0 .1rem;
+.r-name h2 {
+  margin: 0 0.1rem;
   padding: 0;
-  font-family: 'Dosis', sans-serif;
+  font-family: "Dosis", sans-serif;
 }
-.tab-body .t-row .r-name img{
+.tab-body .t-row .r-name img {
   border-radius: 50%;
   width: 40px;
   object-fit: cover;
@@ -149,45 +197,121 @@
   -o-border-radius: 50%;
 }
 
-.btns{
+.btns {
   display: flex;
   flex-direction: row;
 }
-.btns button{
+.btns button {
   font-size: 1rem;
-  padding: .4rem .7rem;
+  padding: 0.4rem 0.7rem;
   border: none;
-  margin: .1rem;
-  border-radius: .4rem;
-  -webkit-border-radius: .4rem;
-  -moz-border-radius: .4rem;
-  -ms-border-radius: .4rem;
-  -o-border-radius: .4rem;
+  margin: 0.1rem;
+  border-radius: 0.4rem;
+  -webkit-border-radius: 0.4rem;
+  -moz-border-radius: 0.4rem;
+  -ms-border-radius: 0.4rem;
+  -o-border-radius: 0.4rem;
 }
-.btn_edit{
+.btn_edit {
   background-color: #facd80;
   color: white;
 }
-.btn_edit:hover{
+.btn_edit:hover {
   transform: scale(1.05);
   background-color: #feae24;
-  transition: all .3s ease-in;
-  -webkit-transition: all .3s ease-in;
-  -moz-transition: all .3s ease-in;
-  -ms-transition: all .3s ease-in;
-  -o-transition: all .3s ease-in;
+  transition: all 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
   -webkit-transform: scale(1.05);
   -moz-transform: scale(1.05);
   -ms-transform: scale(1.05);
   -o-transform: scale(1.05);
 }
-.btn_delete{
+.btn_delete {
   background-color: #355577;
   color: white;
 }
-.btn_delete:hover{
+.btn_delete:hover {
   transform: scale(1.05);
   background-color: #1e3b5a;
+  transition: all 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+}
+/* LOADING */
+.spinner {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner::before,
+.spinner::after {
+  border: 4.8px solid #facd80;
+  border-radius: 50%;
+  position: absolute;
+  content: "";
+  display: block;
+}
+
+.spinner::before {
+  width: 24px;
+  height: 24px;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  animation: spinner-1o3y8q 0.75s infinite linear reverse;
+}
+
+.spinner::after {
+  animation: spinner-1o3y8q 0.5s infinite linear;
+  height: 40px;
+  width: 40px;
+  border-right-color: transparent;
+  border-top-color: transparent;
+}
+
+@keyframes spinner-1o3y8q {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+ul.pagination {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+ul.pagination li {
+  display: inline;
+}
+
+ul.pagination li a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+ul.pagination li a.active {
+  background-color: #facd80;
+  color: white;
+  border-radius: 5px;
+}
+
+.sd{
+  cursor: pointer;
+}
+.sd:hover{
+  background-color: #facd80;
   transition: all .3s ease-in;
   -webkit-transition: all .3s ease-in;
   -moz-transition: all .3s ease-in;

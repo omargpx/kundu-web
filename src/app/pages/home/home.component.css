@@ -7,7 +7,10 @@
   margin-bottom: 10%;
 }
 .main {
-  margin-top: 8%;
+  position: fixed;
+  top: 12%;
+  left: 0;
+  width: 100%;
   padding: 10px;
   padding-top: 20px;
   padding-left: 10%;

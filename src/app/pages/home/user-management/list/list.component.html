@@ -4,55 +4,98 @@
         <button class="button-add" role="button" (click)="addUser()"> <i class="fa-solid fa-plus"></i> Add User</button>
     </div>
     <div class="col-12 m-2 search-box">
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="all" checked>
-            <label class="form-check-label" for="all">
-                ALL
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="fia">
-            <label class="form-check-label" for="fia">
-                FIA
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="fce">
-            <label class="form-check-label" for="fce">
-                FCE
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="fcs">
-            <label class="form-check-label" for="fcs">
-                FCS
-            </label>
-        </div>
+        <ul class="pagination align-content-center">
+            <li><a class="sd active">1</a></li>
+            <li><a class="sd" (click)="searchPage(2)">2</a></li>
+            <li><a class="sd" (click)="searchPage(3)">3</a></li>
+            <li><a class="sd" (click)="searchPage(4)">4</a></li>
+            <li><a class="sd" (click)="searchPage(5)">5</a></li>
+            <li><a class="sd" (click)="searchPage(6)">6</a></li>
+            <li><a class="sd" (click)="searchPage(7)">7</a></li>
+            <li><a class="sd" (click)="searchPage(8)">8</a></li>
+            <li><a class="sd" (click)="searchPage(9)">9</a></li>
+            <li><a class="sd" (click)="searchPage(10)">10</a></li>
+            <li><a class="sd" (click)="searchPage(11)">11</a></li>
+            <li><a class="sd" (click)="searchPage(12)">12</a></li>
+            <li><a class="sd" (click)="searchPage(13)">13</a></li>
+            <li><a class="sd" (click)="searchPage(14)">14</a></li>
+            <li><a class="sd" (click)="searchPage(15)">15</a></li>
+            <li><a class="sd" (click)="searchPage(16)">16</a></li>
+            <li><a class="sd" (click)="searchPage(17)">17</a></li>
+            <li><a class="sd" (click)="searchPage(18)">18</a></li>
+        </ul>
     </div>
-    <div class="col-12 mt-4">
+    <div class="col-12 mt-4 ga">
         <div class="table-management">
             <div class="tab-head">
                 <p class="text-warning">Name</p>
-                <p>Last name</p>
-                <p>Mother's last name</p>
-                <p>Date of Birth</p>
+                <p>Email</p>
+                <p>Identification</p>
+                <p>Code</p>
                 <p></p>
             </div>
-            <div class="tab-body">
-                <div class="t-row">
-                    <div class="r-name">
-                        <h2>Omar Azel</h2>
-                    </div>
-                    <p>Guerrero</p>
-                    <p>Pusma</p>
-                    <p>21/01/1997</p>
-                    <div class="btns m-2">
-                        <button type="button" class="btn_edit"><i class="fa-solid fa-pen-to-square"></i></button>
-                        <button type="button" class="btn_delete"><i class="fa-solid fa-delete-left"></i></button>
+            <div *ngIf="isLoading" class="loadData">
+                <div class="spinner"></div>
+            </div>
+            <div class="mt-5">
+                <div class="tab-body" *ngFor="let person of people; index as i" [attr.data-index]="i">
+                    <div class="t-row">
+                        <div class="r-name">
+                            <h2>{{person.fullName}}</h2>
+                        </div>
+                        <p>{{person.email}}</p>
+                        <p>{{person.identification}}</p>
+                        <p>{{person.code}}</p>
+                        <div class="btns">
+                            <button type="button" class="btn_edit" (click)="edit(person.id)"><i class="fa-solid fa-pen-to-square"></i></button>
+                            <button type="button" class="btn_delete" (click)="deletePerson(person.id)"><i class="fa-solid fa-delete-left"></i></button>
+                        </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
+
+    <!-- <div class="card shadow mb-4">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Identification</th>
+                            <th>Code</th>
+                            <th>Phone</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody *ngFor="let person of people; index as i">
+                        <tr>
+                            <td>{{person.fullName}}</td>
+                            <td>{{person.email}}</td>
+                            <td>{{person.identification}}</td>
+                            <td>{{person.code}}</td>
+                            <td>{{person.phone}}</td>
+                            <td>
+                                <div class="btns justify-content-center">
+                                    <button type="button" class="btn_edit"><i
+                                            class="fa-solid fa-pen-to-square"></i></button>
+                                    <button type="button" class="btn_delete"><i
+                                            class="fa-solid fa-delete-left"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="col-12 justify-content-center">
+                    <ul class="pagination align-content-center">
+                        <li><a href="#" class="active">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div> -->
 </div>

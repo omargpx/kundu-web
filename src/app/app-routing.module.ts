@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ComponentsModule } from './components/components.module';
@@ -22,7 +23,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes,{useHash:true}), ComponentsModule],
+  imports: [RouterModule.forRoot(routes,{useHash:false}), ComponentsModule,CommonModule],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

@@ -87,11 +87,11 @@ input:checked + .radio-tile label {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 .save button {
-  width: 95%;
-  border-radius: 20px;
+  width: 49%;
+  border-radius: .5rem;
   border: 1px solid #1c87eb;
   background-color: #1c87eb;
   color: #ffffff;
@@ -102,6 +102,10 @@ input:checked + .radio-tile label {
   text-transform: uppercase;
   transition: transform 80ms ease-in;
   margin: 0.3rem 0;
+  -webkit-border-radius: .5rem;
+  -moz-border-radius: .5rem;
+  -ms-border-radius: .5rem;
+  -o-border-radius: .5rem;
 }
 .save button:active {
   transform: scale(0.97);
@@ -112,4 +116,9 @@ input:checked + .radio-tile label {
 }
 .save button:focus {
   outline: none;
+}
+#close{
+  background-color: #ddd;
+  border: none;
+  color: #1b1b1b;
 }
