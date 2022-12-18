@@ -7,6 +7,7 @@ import { environment } from './environments/environment';
 import * as Sentry from '@sentry/angular';
 import { BrowserTracing } from '@sentry/tracing';
 
+
 Sentry.init({
   dsn: 'https://2fdc54004e1d42bbb6a5cdfa7ba43518@o1356482.ingest.sentry.io/4504093242884096',
   integrations: [
@@ -21,6 +22,8 @@ Sentry.init({
   // We recommend adjusting this value in production
   tracesSampleRate: 1.0,
 });
+
+
 
 if (environment.production) {
   environment.info('prod');

@@ -10,7 +10,7 @@ export class PeopleService {
   private readonly urlMs: string;
 
   constructor(private http: HttpClient) {
-    this.urlMs = 'http://localhost:8090/ms/people/';
+    this.urlMs = 'http://localhost:8090/ms/people';
   }
 
   getAll() {

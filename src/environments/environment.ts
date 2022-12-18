@@ -8,7 +8,7 @@ export const environment = {
   info(env:string) {
     console.clear();
     const dev_info_css =
-      'font-size:25px; font-family: "Oswaldo", sans-serif; color: #feae24;';
+      'font-size:25px; font-family: "Roboto", sans-serif; color: #feae24;';
     console.info(
       `%cKundu%c.web %c</> %c${env} console`,
       dev_info_css,
